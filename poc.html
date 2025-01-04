@@ -1,173 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bee Solver Technology</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-   <style>
-/* General Reset */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #000;
-    color: #fff;
-}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
 
-/* Hero Section */
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-}
+        /* Hero Section */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    width: 100%;
-}
+        .container-lead-flex {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            width: 100%;
+        }
 
-/* Branding Content */
-.branding {
-    max-width: 50%;
-}
+        /* Branding Content */
+        .branding {
+            max-width: 50%;
+        }
 
-.logo {
-    width: 150px;
-    margin-bottom: 20px;
-}
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
 
-.tagline {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-}
+        .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
 
-.highlight {
-    color: #FFC107;
-}
+        .highlight-main-text {
+            font-size: 1.5rem;
+        }
 
-.ratings {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 30px;
-}
+        .ratings {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
 
-.rating-item {
-    text-align: left;
-}
+        .rating-item {
+            text-align: left;
+        }
 
-.stars {
-    color: #FFC107;
-    font-size: 1.2rem;
-    display: block;
-    margin-bottom: 5px;
-}
+        .stars {
+            color: #FFC107;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 5px;
+        }
 
-.rating-source {
-    font-size: 0.9rem;
-    color: #999;
-}
+        .rating-source {
+            font-size: 0.9rem;
+            color: #999;
+        }
 
-/* Promotion Section */
-.promotion {
-    margin-top: 50px;
-}
+        /* Promotion Section */
+        .promotion {
+            margin-top: 50px;
+        }
 
-.promo-heading {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #FFC107;
-}
+        .promo-heading {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #FFC107;
+        }
 
-.promo-subheading {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
+        .highlighted-yl-text {
+            color: #FFC107;
+        }
 
-.terms {
-    font-size: 0.8rem;
-    color: #999;
-}
+        .promo-subheading {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            border-bottom: 1px solid grey;
+            padding-bottom: 6px;
+            display: inline-block;
+        }
 
-/* Form Section */
-.form-container {
-    background-color: #fff;
-    color: #000;
-    border-radius: 20px;
-    padding: 40px;
-    max-width: 450px;
-    width: 100%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
+        .terms {
+            font-size: 0.8rem;
+            color: #999;
+        }
 
-.lead-form {
-    display: flex;
-    flex-direction: column;
-}
+        /* Form Section */
+        .form-container {
+            background-color: #fff;
+            color: #000;
+            border-radius: 60px;
+            padding: 40px;
+            max-width: 45%;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
 
-.form-heading {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
+        .lead-form {
+            display: flex;
+            flex-direction: column;
+        }
 
-.form-subheading {
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
+        .form-heading-top {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            position: relative;
+            line-height: 28px;
+        }
 
-.form-group {
-    margin-bottom: 20px;
-}
+        .form-heading-top:before {
+            position: absolute;
+            content: "";
+            background: #FFC107;
+            height: 2px;
+            width: 30%;
+            bottom: -6px;
+            left: 35%;
+            right: 0;
+            text-align: center;
+            display: block;
+        }
 
-label {
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-    display: block;
-}
+        .form-subheading-btm {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
 
-input,
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-input:focus,
-textarea:focus {
-    outline: none;
-    border-color: #FFC107;
-}
+        label {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            display: block;
+        }
 
-.submit-button {
-    background-color: #FFC107;
-    color: #000;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
+        input,
+        textarea {
+            width: 100%;
+            border: none;
+            border-radius: 0px;
+            font-size: .7rem;
+            border-bottom: 1px solid #000;
+        }
 
-.submit-button:hover {
-    background-color: #e0a800;
-}
-   </style>
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #FFC107;
+        }
+
+        .lead-form button.submit-button {
+            border-radius: 70px;
+            width: 35%;
+            margin: 0 auto;
+            background-color: #FFC107;
+            color: #000;
+            padding: 15px 20px;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .submit-button:hover {
+            background-color: #e0a800;
+        }
+
+        @media only screen and (max-width:1000px) {
+            .container-lead-flex {
+                flex-direction: column;
+            }
+
+            .form-container {
+                max-width: 100%;
+                margin-top: 30px;
+            }
+
+            .branding {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div class="hero-section">
-        <div class="container">
+        <div class="container-lead-flex">
             <div class="content">
                 <div class="branding">
-                    <img src="https://via.placeholder.com/150" alt="Bee Solver Logo" class="logo">
-                    <h1 class="tagline">Empowering <span class="highlight">Innovation</span> | Enabling Excellence</h1>
+                    <img src="https://www.beesolvertechnology.com/images/logo.svg" alt="BeeSolver Logo" class="logo">
+                </div>
+                <div id="main-left-text" class="d-flex">
+                    <h1 class="tagline">Empowering <span class="highlight">Innovation</span> | Enabling Excellence
+                    </h1>
                     <div class="ratings">
                         <div class="rating-item">
                             <span class="stars">★★★★★</span>
@@ -181,30 +228,39 @@ textarea:focus {
                 </div>
                 <div class="promotion">
                     <h2 class="promo-heading">GET YOUR POC AT $0 COST</h2>
-                    <p class="promo-subheading">Transforming Ideas Into Digital Realities</p>
-                    <small class="terms">T&C APPLY*</small>
+                    <p class="promo-subheading"><span class="highlighted-yl-text">Transforming</span> Ideas Into Digital
+                        Realities</p>
+                    <p><small class="terms">T&C APPLY*</small></p>
                 </div>
             </div>
             <div class="form-container">
+                <div id="form-right-content-box" class="text-center">
+                    <h2 class="form-heading-top">YOUR NEXT BIG IDEA <br><span class="highlight-main-text">POWERED BY
+                            BEES</span></h2>
+                    <p class="form-subheading-btm">Unlock the true potential of your business through innovation and
+                        technological excellence.</p>
+                </div>
                 <form action="#" method="post" class="lead-form">
-                    <h2 class="form-heading">YOUR NEXT BIG IDEA <br><span class="highlight">POWERED BY BEES</span></h2>
-                    <p class="form-subheading">Unlock the true potential of your business through innovation and technological excellence.</p>
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="project">Project Requirement</label>
-                        <textarea id="project" name="project" placeholder="Tell us all about your ideas" rows="4" required></textarea>
+                        <label for="project" class="pb-3">Project Requirement</label>
+                        <textarea id="project" name="project" rows="1" required placeholder="Tell Us All About Your Ideas"></textarea>
                     </div>
                     <button type="submit" class="submit-button">Submit</button>
                 </form>
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
