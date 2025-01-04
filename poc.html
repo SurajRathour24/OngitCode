@@ -4,233 +4,407 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bee Solver Technology</title>
+    <title>POC | BeeBuzz</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        /* General Reset */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #000;
-            color: #fff;
-        }
+        <style>
+            /* General Reset */
+            .poc-landing-page .main-menu {
+                display: none;
+            }
 
-        /* Hero Section */
-        .hero-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 50px;
-        }
+            /* Hero Section */
+            .POC-hero-section {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 50px;
+                background: linear-gradient(rgb(23, 20, 20), black);
+                background-size: cover;
+                background-position: center;
+            }
 
-        .container-lead-flex {
-            display: flex;
-            justify-content: space-between;
-            max-width: 1200px;
-            width: 100%;
-        }
+            .POC-hero-section .content p {
+                color: #fff !important;
+            }
 
-        /* Branding Content */
-        .branding {
-            max-width: 50%;
-        }
+            .POC-hero-section p {
+                margin: 0px !important;
+            }
 
-        .logo {
-            width: 150px;
-            margin-bottom: 20px;
-        }
+            /* .container-lead-flex {
+                display: flex;
+                justify-content: space-between;
+                max-width: 1200px;
+                width: 100%;
+            } */
 
-        .tagline {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-        }
+            /* Branding Content */
+            .POC-hero-section .branding {
+                max-width: 50%;
+            }
 
-        .highlight-main-text {
-            font-size: 1.5rem;
-        }
+            .POC-hero-section .logo {
+                margin-bottom: 20px;
+            }
 
-        .ratings {
-            display: flex;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
+            .POC-hero-section .tagline {
+                margin-bottom: 20px;
+                max-width: 100%;
+                color: #fff;
+                font-size: 30px;
+                font-weight: 500 !important;
+                line-height: 40px;
+                width: 50%;
+                position: relative;
+            }
+            .POC-hero-section .tagline:before {
+        position: absolute;
+        right: 0;
+        content: "";
+        background: #EAB710;
+        height: 100%;
+        width: 2px;
+    }
+    .rating-item.first-star-rating-col:before {
+        position: absolute;
+        right: 0;
+        content: "";
+        background: #484848;
+        height: 100%;
+        width: 2px;
+    }
+    .rating-item.first-star-rating-col {
+        position: relative;
+        padding-right: 22px;
+    }
 
-        .rating-item {
-            text-align: left;
-        }
+            .POC-hero-section .highlight-main-text {
+                font-size: 1.5rem;
+            }
 
-        .stars {
-            color: #FFC107;
-            font-size: 1.2rem;
-            display: block;
-            margin-bottom: 5px;
-        }
+            .POC-hero-section .ratings {
+                display: flex;
+                gap: 30px;
+                margin-bottom: 30px;
+                width: 60%;
+            }
 
-        .rating-source {
-            font-size: 0.9rem;
-            color: #999;
-        }
+            .POC-hero-section .rating-item {
+                text-align: left;
+            }
 
-        /* Promotion Section */
-        .promotion {
-            margin-top: 50px;
-        }
+            .POC-hero-section .stars {
+                color: #FFC107;
+                font-size: 1.2rem;
+                display: block;
+            }
 
-        .promo-heading {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #FFC107;
-        }
+            .POC-hero-section .rating-source {
+                font-size: 0.9rem;
+                color: #999;
+            }
 
-        .highlighted-yl-text {
-            color: #FFC107;
-        }
+            /* Promotion Section */
+            .POC-hero-section .promotion {
+                margin-top: 50px;
+            }
 
-        .promo-subheading {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            border-bottom: 1px solid grey;
-            padding-bottom: 6px;
-            display: inline-block;
-        }
+            .POC-hero-section .promo-heading {
+                font-size: 3.3rem;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: #FFC107;
+            }
+            .poc-special-btm{
+        position: relative;
+    }
+    .poc-special-btm:before {
+        position: absolute;
+        content: "";
+        height: 10px;
+        width: 100%;
+        bottom: -10px;
+        background: url('/images/poc/text-btm-img.png');
+        z-index: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
-        .terms {
-            font-size: 0.8rem;
-            color: #999;
-        }
+            .highlighted-yl-text {
+                color: #FFC107;
+            }
 
-        /* Form Section */
-        .form-container {
-            background-color: #fff;
-            color: #000;
-            border-radius: 60px;
-            padding: 40px;
-            max-width: 45%;
-            width: 100%;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
+            .POC-hero-section .promo-subheading {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                border-bottom: 1px solid grey;
+                padding-bottom: 6px;
+                display: inline-block;
+            }
 
-        .lead-form {
-            display: flex;
-            flex-direction: column;
-        }
+            .POC-hero-section .terms {
+                font-size: 0.8rem;
+                color: #999;
+            }
 
-        .form-heading-top {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            position: relative;
-            line-height: 28px;
-        }
+            /* Form Section */
+            .POC-hero-section .form-container {
+                background-color: #fff;
+                color: #000;
+                border-radius: 60px;
+                padding: 40px;
+                max-width: 42%;
+                width: 100%;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            }
 
-        .form-heading-top:before {
-            position: absolute;
-            content: "";
-            background: #FFC107;
-            height: 2px;
-            width: 30%;
-            bottom: -6px;
-            left: 35%;
-            right: 0;
-            text-align: center;
-            display: block;
-        }
-
-        .form-subheading-btm {
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-            display: block;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            border: none;
-            border-radius: 0px;
-            font-size: .7rem;
-            border-bottom: 1px solid #000;
-        }
-
-        input:focus,
-        textarea:focus {
-            outline: none;
-            border-color: #FFC107;
-        }
-
-        .lead-form button.submit-button {
-            border-radius: 70px;
-            width: 35%;
-            margin: 0 auto;
-            background-color: #FFC107;
-            color: #000;
-            padding: 15px 20px;
-            font-size: 1rem;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .submit-button:hover {
-            background-color: #e0a800;
-        }
-
-        @media only screen and (max-width:1000px) {
-            .container-lead-flex {
+            .POC-hero-section .lead-form {
+                display: flex;
                 flex-direction: column;
             }
 
-            .form-container {
-                max-width: 100%;
-                margin-top: 30px;
+            .POC-hero-section .form-heading-top {
+                font-size: 1.8rem;
+                font-weight: bold;
+                margin-bottom: 20px;
+                position: relative;
+                line-height: 28px;
             }
 
-            .branding {
-                max-width: 100%;
+            #main-poc-left p {
+                color: #fff;
             }
-        }
-    </style>
+
+            .POC-hero-section .form-heading-top:before {
+                position: absolute;
+                content: "";
+                background: #FFC107;
+                height: 2px;
+                width: 30%;
+                bottom: -6px;
+                left: 35%;
+                right: 0;
+                text-align: center;
+                display: block;
+            }
+
+            .POC-hero-section .form-subheading-btm {
+                font-size: 1rem;
+                margin-bottom: 30px !important;
+            }
+
+            .POC-hero-section .form-group {
+                margin-bottom: 20px;
+            }
+
+            .POC-hero-section label {
+                font-size: 0.9rem;
+                margin-bottom: 5px;
+                display: block;
+            }
+
+            .POC-hero-section input,
+            .POC-hero-section textarea {
+                width: 100%;
+                border: none;
+                border-radius: 0px;
+                font-size: .7rem;
+                border-bottom: 1px solid #000;
+            }
+
+            .POC-hero-section input:focus,
+            .POC-hero-section textarea:focus {
+                outline: none;
+                border-color: #FFC107;
+            }
+
+            .POC-hero-section .lead-form button.submit-button {
+                border-radius: 70px;
+                width: 35%;
+                margin: 0 auto;
+                background-color: #FFC107;
+                color: #000;
+                padding: 15px 20px;
+                font-size: 1rem;
+                border: none;
+                cursor: pointer;
+                font-weight: bold;
+                border: 2px solid #FFC107;
+            }
+            .POC-hero-section .lead-form button.submit-button:hover {
+                background-color: transparent;
+                border: 2px solid #FFC107;
+            }
+
+            .POC-hero-section .submit-button:hover {
+                background-color: #e0a800;
+            }
+
+            .container-lead-flex {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            #main-poc-left .promotion img {
+                max-width: 320px;
+                width: 250px;
+            }
+
+            .poc-emp-inv-block {
+                margin-top: 5rem;
+                gap: 20px;
+            }
+            .rating-item span.rating-source {
+        display: block;
+    }
+    #main-poc-left .poc-logo{
+        max-width: 200px;
+    }
+
+
+    @media only screen and (max-width:1430px) {
+        .POC-hero-section .tagline {
+        width: 52%;
+    }
+    .POC-hero-section .tagline {
+        font-size: 26px;
+    }
+
+    .POC-hero-section .form-container {
+        max-width: 38%;
+    }
+    }
+    @media only screen and (max-width:1200px) {
+                .POC-hero-section .promo-heading {
+        font-size: 2.5rem;
+    }
+    .container-lead-flex {
+                    flex-direction: column;
+                }
+                .poc-terms-condition {
+        text-align: center;
+    }
+    .POC-hero-section .form-container {
+                    max-width: 100%;
+                    margin-top: 50px;
+                }
+            }
+
+            @media only screen and (max-width:1000px) {
+                .POC-hero-section .branding {
+                    max-width: 100%;
+                }
+
+    .POC-hero-section .tagline {
+        font-size: 1.6rem;
+        line-height: 30px;
+        width: 52%;
+    }
+            }
+
+            @media only screen and (max-width:600px) {
+                .POC-hero-section .promo-heading {
+        font-size: 1.8rem;
+    }
+    #main-poc-left .promotion img {
+        max-width: 320px;
+        width: 180px;
+    }
+    .poc-emp-inv-block {
+        flex-direction: column;
+    }
+    .POC-hero-section .tagline {
+        width: 100%;
+    }
+    .POC-hero-section .ratings {
+        width: 100%;
+    }
+    .POC-hero-section .tagline:before {
+        position: unset;
+    }
+    .POC-hero-section {
+        padding: 30px;
+    }
+            }
+
+            @media (max-width:480px){
+    #main-poc-left p {
+        font-size: 1rem;
+    }
+    .rating-item span.rating-source {
+        font-size: .7rem;
+    }
+    .POC-hero-section .promo-heading {
+        font-size: 1.4rem;
+    }
+    #main-poc-left .promotion img {
+        width: 140px;
+    }
+    .POC-hero-section .form-heading-top {
+        font-size: 1.5rem;
+    }
+    .POC-hero-section .highlight-main-text {
+        font-size: 1.2rem;
+    }
+    .POC-hero-section .promotion {
+        margin-top: 15px;
+    }
+    .POC-hero-section .lead-form button.submit-button {
+        width: 55%;
+    }
+            }
+
+            @media (max-width:380px){
+    #main-poc-left .promotion img {
+        width: 120px;
+    }
+    .POC-hero-section .promo-heading {
+        font-size: 1.2rem;
+    }
+            }
+
+        </style>
 </head>
 
 <body>
-    <div class="hero-section">
+
+    <!-- Main POC Section Start -->
+    <div class="POC-hero-section">
         <div class="container-lead-flex">
-            <div class="content">
-                <div class="branding">
-                    <img src="https://www.beesolvertechnology.com/images/logo.svg" alt="BeeSolver Logo" class="logo">
-                </div>
-                <div id="main-left-text" class="d-flex">
-                    <h1 class="tagline">Empowering <span class="highlight">Innovation</span> | Enabling Excellence
-                    </h1>
-                    <div class="ratings">
-                        <div class="rating-item">
-                            <span class="stars">★★★★★</span>
-                            <p>4.4 / 5 rating<br><span class="rating-source">Google Rating</span></p>
-                        </div>
-                        <div class="rating-item">
-                            <span class="stars">★★★★★</span>
-                            <p>98% Job success<br><span class="rating-source">Upwork</span></p>
+            <div class="poc-content">
+                <div id="main-poc-left">
+                    <div class="branding">
+                        <h3 style="color: #fff;">LOGO</h3>
+                    </div>
+                    <div class="poc-emp-inv-block d-flex align-items-center">
+                        <h1 class="tagline">Empowering <span class="highlighted-yl-text">Innovation</span> Enabling
+                            Excellence
+                        </h1>
+                        <div class="ratings">
+                            <div class="rating-item first-star-rating-col">
+                                <span class="stars">★★★★★</span>
+                                <p>4.4 / 5 rating<span class="rating-source">Google Rating</span></p>
+                            </div>
+                            <div class="rating-item">
+                                <span class="stars">★★★★★</span>
+                                <p>98% Job success<span class="rating-source">Upwork</span></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="promotion">
-                    <h2 class="promo-heading">GET YOUR POC AT $0 COST</h2>
-                    <p class="promo-subheading"><span class="highlighted-yl-text">Transforming</span> Ideas Into Digital
-                        Realities</p>
-                    <p><small class="terms">T&C APPLY*</small></p>
+                    <div class="promotion d-flex align-items-center">
+                        <img src="https://png.pngtree.com/png-clipart/20190520/original/pngtree-network-bitcoin-technology-blockchain-big-data-elements-5dthe-internetbitcoinvirtual-currencytechnologyblockchainbreathablebig-png-image_4034259.jpg" alt="left-promotion-img">
+                        <h2 class="promo-heading">GET YOUR POC <br>  AT <span class="poc-special-btm position-relative">   $0 COST </span></h2>
+                    </div>
+                    <div class="poc-terms-condition">
+                        <p class="promo-subheading"><span class="highlighted-yl-text">Transforming</span> Ideas Into
+                            Digital
+                            Realities</p>
+                        <p><small class="terms">T&C APPLY*</small></p>
+                    </div>
                 </div>
             </div>
             <div class="form-container">
@@ -240,7 +414,7 @@
                     <p class="form-subheading-btm">Unlock the true potential of your business through innovation and
                         technological excellence.</p>
                 </div>
-                <form action="#" method="post" class="lead-form">
+                <form action="process-form.php" method="POST" class="lead-form">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
@@ -251,13 +425,15 @@
                     </div>
                     <div class="form-group">
                         <label for="project" class="pb-3">Project Requirement</label>
-                        <textarea id="project" name="project" rows="1" required placeholder="Tell Us All About Your Ideas"></textarea>
+                        <textarea id="project" name="project" rows="1" required
+                            placeholder="Tell Us All About Your Ideas"></textarea>
                     </div>
                     <button type="submit" class="submit-button">Submit</button>
                 </form>
             </div>
         </div>
     </div>
+    <!-- Main POC Section Ends-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

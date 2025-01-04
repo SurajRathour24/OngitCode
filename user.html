@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User</title>
+<style>
+    .promo-heading-container {
+    display: inline-block;
+    position: relative;
+}
+
+.promo-heading {
+    font-size: 2.5rem; /* Adjust for the heading size */
+    line-height: 1.2; /* Keeps the heading compact */
+    margin: 0;
+}
+
+.promo-underline-img {
+    position: absolute;
+    bottom: -10px; /* Adjust to position the image under the text */
+    left: 50%; /* Center the image */
+    transform: translateX(-50%); /* Align center with heading */
+    max-width: 80%; /* Make it responsive */
+    height: auto;
+}
+
+</style>
 </head>
 <body>
-    
+    <div class="promo-heading-container text-center position-relative">
+        <h2 class="promo-heading fw-bold text-warning">
+            GET YOUR POC <br> AT $0 COST
+        </h2>
+        <img src="https://www.beesolvertechnology.com/images/poc/text-btm-img.png"
+            alt="Underline decoration"
+            class="promo-underline-img">
+    </div>
 </body>
 </html>
