@@ -7,7 +7,7 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="">
     <style>
-        h5{
+        h5 {
             color: #f00;
         }
     </style>
@@ -56,38 +56,73 @@
     <br><br>
     <h2>Git restore</h2>
     <br>To restore your code or files you can use restore command like below : </br>
-    <strong>git restore [filename]       , for the normal cases like if file is in unstracked or not in staging area</strong>
+    <strong>git restore [filename] , for the normal cases like if file is in unstracked or not in staging area</strong>
 
-    <strong>git restore --staged [filename]    : This will move file from staging to working directory
+    <strong>git restore --staged [filename] : This will move file from staging to working directory
 
-        <b style="color: #f00;">NOTE : This command also usedfull to move file back to working direc from staging area</b>
+        <b style="color: #f00;">NOTE : This command also usedfull to move file back to working direc from staging
+            area</b>
     </strong>
     </p>
 
 
     <secton id="git-branch">
         <h2>Git Branches</h2>
-     <ul>
-        <li>To create branch : <strong>git branch [branch name]</strong></li>
-        <li>Switch to other branch : <strong>git checkout [branch name]</strong></li>
-        <li>To check list of branches: <strong>git branch</strong></li>
-        <li>To merge changes to main branch: <strong>go to branch where you want to merge changes (e.g main) : git branch merge [branch name]</strong></li>
-        <li>To delete the branch after completion or whenever [this will delete locally]: <strong>git branch -d [branch name]</strong></li>
-        <li>To delete the branch after completion or whenever [to delete from online]: <strong>git push origin --delete [branch name]</strong></li>
-        <h5><em>NOTE: After delete the branch make sure to push changes to online repo as well by <strong>git push origin main</strong> </em></h5>
-        <h5><em>NOTE: After delete the branch make sure to push changes to online repo as well by <strong>git push origin main</strong> </em></h5>
-     </ul>
-     <button>Switch to Home</button>
+        <ul>
+            <li>To create branch : <strong>git branch [branch name]</strong></li>
+            <li>Switch to other branch : <strong>git checkout [branch name]</strong></li>
+            <li>To check list of branches: <strong>git branch</strong></li>
+            <li>To merge changes to main branch: <strong>go to branch where you want to merge changes (e.g main) : git
+                    branch merge [branch name]</strong></li>
+            <li>To delete the branch after completion or whenever [this will delete locally]: <strong>git branch -d
+                    [branch name]</strong></li>
+            <li>To delete the branch after completion or whenever [to delete from online]: <strong>git push origin
+                    --delete [branch name]</strong></li>
+            <h5><em>NOTE: After delete the branch make sure to push changes to online repo as well by <strong>git push
+                        origin main</strong> </em></h5>
+            <h5><em>NOTE: After delete the branch make sure to push changes to online repo as well by <strong>git push
+                        origin main</strong> </em></h5>
+        </ul>
+        <button>Switch to Home</button>
     </secton>
 
-<<<<<<< HEAD
-
-    <section id="pull-merge">
+<section id="pull-merge">
         <h2>Git Pull and Merge commands</h2>
         <ul>
             <li>To get the or merge the main branch changes to child branch Use: <strong>Git pull origin [branch name]</strong> </li>
+            <li>To get the or merge the main branch changes to child branch Use: <strong>Git pull origin main</strong>
+            </li>
         </ul>
-    </section>
+        </section>
+
+        <section id="rebase-cmd">
+            <h2>Git Rebase cmd</h2>
+            <p>Git rebase and merge command almost similar
+                <em>Mainly git rebase is used to make the child branch similar to main branch to avoid conflict</em>
+            </p>
+            <h5>We can say that with rebase child branch redirected to main branch</h5>
+            <ul>
+                <li>Command to use git rebase : Firstly rebase the main branch in child branch<strong>git rebase main</strong></li>
+                <li>2nd step also rebase the main branch with child branch : <strong>git rebase [child branch]</strong></li>
+            </ul>
+        </section>
+
+        <section id="git-ignore">
+            <h2>Git Ignore file</h2>
+            <em>Everything which will within in git ignore file will be untracked or ignored by git</em>
+            <ul>
+                <li><strong>Always name git-ignore file only : .gitignore</strong></li>
+
+                <strong>Git ignore usefull when you have some data which you dont want to add in github or in server , like sometime there are details of user, logs , credentials and many more , so to pelase these to track we can add those files names in gitignore</strong>
+            </ul>
+
+            <h2>Git Readme file</h2>
+            <p>Git readme file is usefull when you want to add information about project, that can be screenshot, language types or anything about projects</p>
+
+            <em>There is proper format or way to write readme file </em>
+            <p>Rule to add readme file with formating : https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax</p>
+        </section>
 </body>
+
 
 </html>
