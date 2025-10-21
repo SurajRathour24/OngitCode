@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .bgcolor{
+        background: linear-gradient(#f00, #000);
+        color:#fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        margin: 0 auto;
+        height: 100vh;
+    }
+    </style>
+</head>
+<body>
+    
+    <button class="btn">Change BG</button>
+
+
+    <script>
+        console.log("Click Event");
+
+        let btn = document.querySelector(".btn");
+        let changeColor = (dets) =>{
+            btn.classList.toggle("bgcolor");
+            console.log(dets);
+        }
+        btn.addEventListener("click", changeColor);
+
+    </script>
+</body>
+</html>

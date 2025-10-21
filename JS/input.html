@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>HTML Input</h1>
+
+    <input class="user-input" type="text" placeholder="Type Your Name...">
+
+
+
+    <script>
+        console.log("Test Input");
+
+        let input = document.querySelector(".user-input");
+
+        let getInput = (data)=>{
+            if (data.data !== null){
+                console.log(data.data);
+            }
+        }
+        input.addEventListener("input", getInput)
+
+
+
+
+
+    </script>
+</body>
+</html>

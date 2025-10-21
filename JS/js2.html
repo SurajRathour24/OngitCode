@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .custom-color{
+            background-color: burlywood;
+            /* padding: 10px 12px; */
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h1>This is JS 2 Part </h1>
+
+    <ul>
+        <li>KTM</li>
+        <li>Altroz</li>
+        <li>Swift</li>
+        <li>Nexon</li>
+
+    </ul>
+
+
+    <script>
+        console.log("Hey Test");
+
+        let list = document.querySelectorAll("li");
+
+        // console.log(list);
+
+        // list.forEach(function(li) {
+        //     console.log(li.textContent);
+        // })
+
+        let addBg = () =>{
+            list.forEach(function(li){
+                li.classList.toggle("custom-color");
+            })
+        }
+        list.forEach(function(li){
+            li.addEventListener("click", addBg);
+        })
+    </script>
+</body>
+</html>
