@@ -89,6 +89,7 @@
 <section id="pull-merge">
         <h2>Git Pull and Merge commands</h2>
         <ul>
+            <li>To get the or merge the main branch changes to child branch Use: <strong>Git pull origin [branch name]</strong> </li>
             <li>To get the or merge the main branch changes to child branch Use: <strong>Git pull origin main</strong>
             </li>
         </ul>
@@ -125,6 +126,29 @@
 
             <em>There is proper format or way to write readme file </em>
             <p>Rule to add readme file with formating : https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax</p>
+        </section>
+
+        <section id="squash-revert">
+            <h2>Squash - Revert & Reset </h2>
+            <ul>
+                <li>Squash - Command is used to merge the commits : <strong> git rebase -i HEAD~[2][number of commits  count from head=0]  </strong></li>
+            </ul>
+
+            <h3>AFter itsquash or pick , try to  keep pick first commit then press :     exc => enter => : => x => enter </h3>
+        
+        <h2>Git revert cmd</h2>
+        <ul>
+            <li>To revert use : <strong>git revert HEAD~2  [same like squash]</strong></li>
+            <li>Basic use of revert we can say that we can revert any particular commti through revert which not possible with restore</li>
+        </ul>
+        </section>
+
+        <section id="git-tag">
+            <h2>Git Tags</h2>
+            <ul>
+                <li>Command to add tag : <strong>git tag v0.1</strong></li>
+                <li>Command to push tag to repo <strong>git push origin v0.1 [tag name]</strong></li>
+            </ul>
         </section>
 </body>
 
