@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: #222;
+            color: darkgrey;
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 80px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 id="main-text">A</h1>
+    </div>
+
+    <script>
+        console.log('User Keyboard Event');
+        let heading = document.querySelector("#main-text");
+
+        let userInput = (val) =>{
+            console.log(val);
+            heading.textContent = val.key;
+        }
+        window.addEventListener('keydown', userInput);
+
+    </script>
+
+</body>
+
+</html>

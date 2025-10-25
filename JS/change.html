@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 12px;
+            background-color: aquamarine;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Change event is woking whne input, select or textarea have any change -->
+    <h1 class="heading1">Choose a Device</h1>
+
+    <select name="device" id="device-name">
+        <option selected disabled>Choose Your Device</option>
+        <option value="samsung">Samsung</option>
+        <option value="iphone">Iphone</option>
+        <option value="google">Google</option>
+    </select>
+
+
+
+    <script>
+        console.log("Change Event");
+
+        let slct = document.querySelector('select');
+        let h1 = document.querySelector('.heading1')
+        let msg = document.createElement("p");
+        // console.log(slct);
+        let getChange = (change) =>{
+            // console.log(change);
+            if(change){
+                h1.textContent = "Device Selected";
+                msg.textContent = `Thank you for Choosing ${change.target.value}`;
+                h1.appendChild(msg);
+                console.log(change.target.value);
+            }
+        }
+
+        slct.addEventListener('change', getChange);
+    </script>
+    
+</body>
+</html>
