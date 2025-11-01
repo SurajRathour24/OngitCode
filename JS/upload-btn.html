@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Upload - File BTN</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            background-color: #222;
+            color: bisque;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+        .container{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .upload-file{
+            display: none;
+        }
+        #upload-btn{
+            padding: 15px 20px;
+            background-color: coral;
+            color: #fff;
+            border: 1px solid coral;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="file-upload-box">
+            <input type="file" class="upload-file">
+            <button id="upload-btn">Select File...</button>
+        </div>
+    </div>
+
+
+    <script>
+        let file = document.querySelector('.upload-file');
+        let fileBtn = document.querySelector('#upload-btn');
+
+        function uploadFile (dets) {
+            file.click();
+        }
+        fileBtn.addEventListener('click', uploadFile);
+
+        let getFileInfo = (dt) =>{
+            console.log(dt);
+            let fileName = dt.target.files[0];
+            if(fileName){
+                fileBtn.textContent = fileName.name;
+            }
+        }
+        file.addEventListener('change', getFileInfo)
+    </script>
+</body>
+</html>
